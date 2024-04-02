@@ -23,12 +23,19 @@ const Test = () => {
   }
   function fn<T>(props: Props<T>) {
     const { list, children } = props;
-    return list.map((item) => (
-      <div>
-        {children} {item}
-      </div>
-    ));
+    return list.map((item) => <div>{item && children}</div>);
   }
+
+  interface PropTYpe<FirstType = number, SencondType = any> {
+    name: FirstType;
+    age: SencondType;
+  }
+  const obj: PropTYpe = {
+    name: 10,
+    age: "2343",
+  };
+  console.log(obj);
+
   return (
     <div>
       test
