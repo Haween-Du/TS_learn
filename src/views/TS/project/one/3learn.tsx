@@ -9,15 +9,15 @@ src/conponents/CellDefault
 */
 
 const Test = () => {
-  type Key = "age" | "name";
-  type Value = undefined | 20;
-  //key必须全部都有  value就无所谓i
-  const obj: Record<Key, Value> = {
-    age: 20,
-    name: undefined,
+  interface Person<NameType, AgeType> {
+    name: NameType;
+    age: AgeType;
+  }
+  const jackInfo: Person<string, string> = {
+    name: "jack",
+    age: "18",
   };
-  console.log(obj);
-
+  console.log(jackInfo);
   return (
     <div>
       2learn
