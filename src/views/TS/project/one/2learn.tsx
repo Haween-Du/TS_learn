@@ -29,12 +29,16 @@ src/conponents/CellDefault
       type test2 = Omit<User, "age">;
 */
 
+type Size = "small" | "big" | "middle";
+let size: Size = "small";
+console.log(size);
+
 const Test = () => {
-  interface User {
-    name?: string;
-    age: number;
-    hobby: string;
-  }
+  // interface User {
+  //   name?: string;
+  //   age: number;
+  //   hobby: string;
+  // }
   // type PartialUser = Partial<User>;
   // type test = Exclude<"a" | "b", "a">;
   // type test2 = Omit<User, "age">;
